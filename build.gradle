@@ -59,7 +59,7 @@ bootJar {
 task copyAngular(type: Copy) {
     from 'angular-demo/dist/angular-demo'
     into "$buildDir/resources/main/public"
-    into "out/production/resources/main/public"
+    into "out/production/resources/public"
 }
 
 //frontend:build will be run before the processResources
