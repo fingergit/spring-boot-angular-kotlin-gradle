@@ -118,7 +118,7 @@ bootJar {
 task copyAngular(type: Copy) {
     from 'angular-demo/dist/angular-demo'
     into "$buildDir/resources/main/public"
-    into "out/production/resources/main/public"
+    into "out/production/resources/public"
 }
 
 //frontend:build will be run before the processResources
@@ -161,3 +161,29 @@ In `Run/Edit Configurations...`
 ![img](doc/img/angular2.png)
 
 ![img](doc/img/angular3.png)
+
+  ```plantuml
+  @startuml
+  card Controller #palegreen
+  card Service #pink
+  card Manager #lightblue
+  card Model #LightYellow
+  card Dao #YellowGreen
+  card System类 #LightGrey
+
+  skinparam class {
+    BackgroundColor aliceblue
+    ArrowColor powderblue
+    BorderColor powderblue
+
+    BackgroundColor<<控制器>> ivory
+    BorderColor<<控制器>> wheat
+  }
+  skinparam stereotypeCBackgroundColor<< 控制器 >> palegreen
+  skinparam stereotypeCBackgroundColor<< 服务 >> pink
+  skinparam stereotypeCBackgroundColor<< 管理器 >> lightblue
+  skinparam stereotypeCBackgroundColor<< 模型 >> LightYellow
+  skinparam stereotypeCBackgroundColor<< DAO >> YellowGreen
+  skinparam stereotypeCBackgroundColor<< 系统类 >> LightGrey
+  @enduml
+  ```
