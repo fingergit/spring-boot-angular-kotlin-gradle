@@ -1,0 +1,7 @@
+= Test Ascii doc
+
+[plantuml, format="png", width="100px",alt="my diagram"]
+--
+Alice -> Bob : ping
+Bob -> Alice : pong
+--
